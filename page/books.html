@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Books & Study Materials | GyanDeep Academy</title>
+    <meta
+      name="description"
+      content="Class VI to X books and study materials for GyanDeep Academy, Khordha, Odisha."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --n: #092f68;
+        --n2: #061f46;
+        --g: #fbbd19;
+        --bg: #f5f8fc;
+        --ink: #14233b;
+        --mut: #6b788b;
+        --line: #e1e8f1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .wrap {
+        width: min(1180px, calc(100% - 30px));
+        margin: auto;
+      }
+
+      header {
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        position: sticky;
+        top: 0;
+        z-index: 5;
+      }
+
+      .nav {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 13px;
+        background: var(--n);
+        color: var(--g);
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+      }
+
+      .brand b {
+        font: 800 22px Manrope;
+      }
+
+      .brand b:first-child {
+        color: var(--n);
+      }
+
+      .brand small {
+        display: block;
+        font-size: 8px;
+        letter-spacing: 4px;
+        font-weight: 800;
+        color: #667;
+      }
+
+      .links {
+        display: flex;
+        gap: 25px;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--mut);
+      }
+
+      .call {
+        background: var(--n);
+        color: #fff;
+        padding: 11px 15px;
+        border-radius: 10px;
+        font-weight: 800;
+        font-size: 12px;
+      }
+
+      .call i {
+        color: var(--g);
+      }
+
+      .hero {
+        background: linear-gradient(135deg, var(--n2), var(--n));
+        color: #fff;
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font: 800 clamp(38px, 5vw, 64px)/1.05 Manrope;
+        letter-spacing: -3px;
+        margin: 12px 0;
+      }
+
+      .hero h1 span {
+        color: var(--g);
+      }
+
+      .hero p {
+        color: #c4d1e4;
+        max-width: 650px;
+      }
+
+      .eyebrow {
+        color: var(--g);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+      }
+
+      .tools {
+        margin-top: -28px;
+        position: relative;
+      }
+
+      .toolbar {
+        background: #fff;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 15px 40px #092f6815;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .search {
+        flex: 1;
+        min-width: 220px;
+        position: relative;
+      }
+
+      .search i {
+        position: absolute;
+        left: 13px;
+        top: 13px;
+        color: #8996a8;
+      }
+
+      .search input {
+        width: 100%;
+        padding: 11px 12px 11px 38px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        outline: none;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+
+      .tab {
+        border: 1px solid var(--line);
+        background: #fff;
+        padding: 10px 13px;
+        border-radius: 9px;
+        font-weight: 800;
+        font-size: 12px;
+        color: var(--mut);
+        cursor: pointer;
+      }
+
+      .tab.active,
+      .tab:hover {
+        background: var(--n);
+        color: #fff;
+        border-color: var(--n);
+      }
+
+      main {
+        padding: 65px 0 90px;
+      }
+
+      .head {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      .head small {
+        color: #1260a8;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      .head h2 {
+        font: 800 40px Manrope;
+        margin: 7px 0;
+      }
+
+      .head p {
+        color: var(--mut);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: 0.25s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 45px #092f6818;
+      }
+
+      .cover {
+        height: 225px;
+        padding: 18px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cover:after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border: 35px solid #ffffff15;
+        border-radius: 50%;
+        right: -80px;
+        top: -60px;
+      }
+
+      .blue {
+        background: linear-gradient(145deg, #092f68, #1872bd);
+      }
+
+      .gold {
+        background: linear-gradient(145deg, #9c6900, #f4bd20);
+      }
+
+      .green {
+        background: linear-gradient(145deg, #08734b, #25a96b);
+      }
+
+      .purple {
+        background: linear-gradient(145deg, #4e2a80, #8055bc);
+      }
+
+      .red {
+        background: linear-gradient(145deg, #812e32, #c95747);
+      }
+
+      .dark {
+        background: linear-gradient(145deg, #182638, #385474);
+      }
+
+      .top,
+      .main,
+      .bottom {
+        position: relative;
+        z-index: 1;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        font-weight: 800;
+      }
+
+      .tag {
+        background: #ffffff25;
+        padding: 5px 8px;
+        border-radius: 6px;
+      }
+
+      .main i {
+        font-size: 30px;
+      }
+
+      .main h3 {
+        font: 800 25px Manrope;
+        margin: 8px 0 0;
+      }
+
+      .main p {
+        color: #ffffffcc;
+        font-size: 10px;
+        margin: 3px 0;
+      }
+
+      .bottom {
+        font-size: 9px;
+        color: #fff9;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+
+      .info {
+        padding: 17px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .subject {
+        color: #1260a8;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+
+      .info h3 {
+        font: 800 17px Manrope;
+        margin: 4px 0;
+      }
+
+      .info p {
+        font-size: 12px;
+        color: var(--mut);
+        min-height: 40px;
+      }
+
+      .meta {
+        font-size: 10px;
+        color: #8491a2;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+
+      .download {
+        background: var(--n);
+        color: #fff;
+        border-radius: 10px;
+        padding: 11px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 800;
+        margin-top: auto;
+      }
+
+      .download i {
+        color: var(--g);
+        margin-right: 5px;
+      }
+
+      .empty {
+        text-align: center;
+        display: none;
+        padding: 60px;
+        color: var(--mut);
+      }
+
+      .note {
+        margin-top: 35px;
+        background: #fff8df;
+        border: 1px solid #f0dc9d;
+        padding: 15px;
+        border-radius: 14px;
+        color: #765d16;
+        font-size: 12px;
+      }
+
+      .note i {
+        color: #c49000;
+      }
+
+      footer {
+        background: var(--n2);
+        color: #aebdd0;
+        padding: 40px 0 20px;
+        margin-top: 0;
+      }
+
+      .foot {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .foot strong {
+        color: #fff;
+        font: 800 18px Manrope;
+      }
+
+      .foot a {
+        display: block;
+        margin-top: 8px;
+        font-size: 12px;
+      }
+
+      .copy {
+        border-top: 1px solid #ffffff18;
+        margin-top: 30px;
+        padding-top: 15px;
+        font-size: 10px;
+      }
+
+      @media (max-width: 1000px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 750px) {
+        .links {
+          display: none;
+        }
+
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .head h2 {
+          font-size: 32px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 55px 0;
+        }
+
+        .hero h1 {
+          letter-spacing: -2px;
+        }
+
+        .foot {
+          display: block;
+        }
+
+        .call {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><span class="logo"><i class="fa-solid fa-book-open"></i></span
+          ><span
+            ><b
+              ><span style="color: #092f68">Gyan</span
+              ><span style="color: #dfa600">Deep</span></b
+            ><small>ACADEMY</small></span
+          ></a
+        >
+        <nav class="links">
+          <a href="index.html">Home</a><a href="index.html#classes">Classes</a
+          ><a href="#" style="color: #092f68">Books</a
+          ><a href="index.html#admission">Admissions</a>
+        </nav>
+        <a class="call" href="tel:+918342916384"
+          ><i class="fa-solid fa-phone"></i> +91 83429 16384</a
+        >
+      </div>
+    </header>
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow"
+          ><i class="fa-solid fa-book-open-reader"></i> GyanDeep Digital
+          Library</span
+        >
+        <h1>Books & <span>Study Materials</span></h1>
+        <p>
+          Explore class-wise books for Classes VI–X. Search by subject, select a
+          class and download the available PDF.
+        </p>
+      </div>
+    </section>
+    <div class="wrap tools">
+      <div class="toolbar">
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input id="search" placeholder="Search books or subjects..." />
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-c="all">All</button
+          ><button class="tab" data-c="VI">VI</button
+          ><button class="tab" data-c="VII">VII</button
+          ><button class="tab" data-c="VIII">VIII</button
+          ><button class="tab" data-c="IX">IX</button
+          ><button class="tab" data-c="X">X</button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="wrap">
+        <div class="head">
+          <small>Digital Library</small>
+          <h2>Class-wise Books</h2>
+          <p>Choose a class or search for a subject.</p>
+        </div>
+        <section class="grid" id="grid"></section>
+        <div class="note">
+          <i class="fa-solid fa-circle-info"></i> Replace the example PDF paths
+          with your actual, legally distributable PDF files. Do not upload
+          copyrighted textbooks unless you have permission or they are
+          officially provided for free distribution.
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <div>
+          <strong>GyanDeep Academy</strong>
+          <p>Coaching Centre • Classes VI–X • BSE Odisha • Odia Medium</p>
+        </div>
+        <div>
+          <a href="tel:+918342916384"
+            ><i class="fa-solid fa-phone"></i> +91 83429 16384</a
+          ><a href="https://wa.me/918342916384"
+            ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+          ><a href="index.html"
+            ><i class="fa-solid fa-house"></i> Main Website</a
+          >
+        </div>
+      </div>
+      <div class="wrap copy">
+        © <span id="year"></span> GyanDeep Academy. All rights reserved.
+      </div>
+    </footer>
+    <script>
+      const books = [['VI', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-6/odia.pdf'], ['VI', 'Mathematics', 'Mathematics', 'fa-calculator', 'gold', 'Mathematics', 'books/class-6/mathematics.pdf'], ['VI', 'Science', 'Science', 'fa-flask', 'green', 'Science', 'books/class-6/science.pdf'], ['VII', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-7/odia.pdf'], ['VII', 'Mathematics', 'Mathematics', 'fa-calculator', 'gold', 'Mathematics', 'books/class-7/mathematics.pdf'], ['VII', 'Science', 'Science', 'fa-flask', 'green', 'Science', 'books/class-7/science.pdf'], ['VII', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-7/english.pdf'], ['VIII', 'Mathematics', 'Mathematics', 'fa-square-root-variable', 'gold', 'Mathematics', 'books/class-8/mathematics.pdf'], ['VIII', 'Science', 'Science', 'fa-atom', 'blue', 'Science', 'books/class-8/science.pdf'], ['VIII', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'purple', 'Language', 'books/class-8/odia.pdf'], ['IX', 'Mathematics', 'Mathematics', 'fa-chart-line', 'dark', 'Mathematics', 'books/class-9/mathematics.pdf'], ['IX', 'Science', 'Science', 'fa-microscope', 'red', 'Science', 'books/class-9/science.pdf'], ['IX', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-9/english.pdf'], ['X', 'Mathematics', 'Mathematics', 'fa-trophy', 'gold', 'Mathematics', 'books/class-10/mathematics.pdf'], ['X', 'Science', 'Science', 'fa-atom', 'green', 'Science', 'books/class-10/science.pdf'], ['X', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-10/odia.pdf'], ['X', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-10/english.pdf'], ['X', 'Social Science', 'Social Science', 'fa-earth-asia', 'dark', 'Social Science', 'books/class-10/social-science.pdf']];
+
+      const grid = document.getElementById('grid');
+      const empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.innerHTML = '<i class="fa-solid fa-book-open"></i><h3>No books found</h3><p>Try another class or search term.</p>';
+      document.querySelector('main .wrap').append(empty);
+
+      function render(cls = 'all', q = '') {
+        grid.innerHTML = '';
+        let n = 0;
+
+        books.forEach((b) => {
+          const matches = (cls === 'all' || b[0] === cls) && (!q || b.join(' ').toLowerCase().includes(q));
+          if (!matches) return;
+          n++;
+          grid.insertAdjacentHTML(
+            'beforeend',
+            `<article class="card"><div class="cover ${b[4]}"><div class="top"><span>GYANDEEP ACADEMY</span><span class="tag">CLASS ${b[0]}</span></div><div class="main"><i class="fa-solid ${b[3]}"></i><h3>${b[2]}</h3><p>${b[1]}</p></div><div class="bottom">BSE ODISHA • ODIA MEDIUM</div></div><div class="info"><span class="subject">${b[5]}</span><h3>${b[1]} — Class ${b[0]}</h3><p>Digital study material for Class ${b[0]}.</p><div class="meta"><span><i class="fa-solid fa-file-pdf"></i> PDF</span><span>Class ${b[0]}</span></div><a class="download" href="${b[6]}" download><i class="fa-solid fa-download"></i> Download PDF</a></div></article>`
+          );
+        });
+
+        empty.style.display = n ? 'none' : 'block';
+      }
+
+      let cls = 'all';
+      document.querySelectorAll('.tab').forEach((x) => {
+        x.addEventListener('click', () => {
+          document.querySelectorAll('.tab').forEach((y) => y.classList.remove('active'));
+          x.classList.add('active');
+          cls = x.dataset.c;
+          render(cls, document.getElementById('search').value.toLowerCase());
+        });
+      });
+
+      document.getElementById('search').addEventListener('input', (e) => {
+        render(cls, e.target.value.toLowerCase());
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+      render();
+    </script>
+  </body>
+</html>
