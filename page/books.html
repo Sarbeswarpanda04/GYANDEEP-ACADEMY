@@ -18,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
       :root {
         --n: #092f68;
@@ -490,25 +491,31 @@
   </head>
 
   <body>
+    <div class="top">
+      <div><i class="fa-solid fa-bullhorn"></i> Admissions opening soon</div>
+      <a href="../index.html#admission">Enquire now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
     <header>
-      <div class="wrap nav">
-        <a class="brand" href="index.html"
-          ><span class="logo"><i class="fa-solid fa-book-open"></i></span
-          ><span
-            ><b
-              ><span style="color: #092f68">Gyan</span
-              ><span style="color: #dfa600">Deep</span></b
-            ><small>ACADEMY</small></span
-          ></a
-        >
-        <nav class="links">
-          <a href="index.html">Home</a><a href="index.html#classes">Classes</a
-          ><a href="#" style="color: #092f68">Books</a
-          ><a href="index.html#admission">Admissions</a>
+      <div class="nav wrap">
+        <a class="logo site-logo" href="../index.html#home" aria-label="GyanDeep Academy home"><img src="../assets/logo/GyanDeep-Academy-Logo.png" alt="GyanDeep Academy Logo" /></a>
+        <nav>
+          <a href="../index.html#home">Home</a><a href="../index.html#about">About</a><a href="../index.html#classes">Classes</a><a href="../index.html#why">Why Us</a><a
+            href="../index.html#admission">Admissions</a><a href="../index.html#faq">FAQ</a><a href="../index.html#contact">Contact</a>
+          <a href="books.html">Books</a>
         </nav>
-        <a class="call" href="tel:+918342916384"
-          ><i class="fa-solid fa-phone"></i> +91 83429 16384</a
-        >
+        <div class="navbtn">
+          <button id="theme" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i></button><a class="call" href="tel:+918342916384"><i
+              class="fa-solid fa-phone"></i> Call Now</a><button id="menu" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile" class="mobile">
+        <a href="../index.html#home">Home</a><a href="../index.html#about">About</a><a href="../index.html#classes">Classes</a><a href="../index.html#why">Why Us</a><a
+          href="../index.html#admission">Admissions</a><a href="../index.html#faq">FAQ</a><a href="../index.html#contact">Contact</a>
+        <a href="books.html">Books</a>
+        <a class="mcall" href="tel:+918342916384"><i class="fa-solid fa-phone"></i> +91 83429 16384</a>
       </div>
     </header>
     <section class="hero">
@@ -559,24 +566,77 @@
     <footer>
       <div class="wrap foot">
         <div>
-          <strong>GyanDeep Academy</strong>
-          <p>Coaching Centre • Classes VI–X • BSE Odisha • Odia Medium</p>
+          <a class="logo site-logo" href="../index.html#home" aria-label="GyanDeep Academy home"><img src="../assets/logo/GyanDeep-Academy-Logo.png" alt="GyanDeep Academy Logo" /></a>
+          <p>COACHING CENTRE<br />Classes VI–X • BSE Odisha • Odia Medium</p>
+          <b class="gold">Learn Today, Lead Tomorrow.</b>
         </div>
         <div>
-          <a href="tel:+918342916384"
-            ><i class="fa-solid fa-phone"></i> +91 83429 16384</a
-          ><a href="https://wa.me/918342916384"
-            ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
-          ><a href="index.html"
-            ><i class="fa-solid fa-house"></i> Main Website</a
-          >
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a><a href="../index.html#classes">Classes</a><a href="../index.html#why">Why Us</a><a
+            href="../index.html#admission">Admissions</a><a href="../index.html#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Academic</h4>
+          <a href="../index.html#classes">Class VI</a><a href="../index.html#classes">Class VII</a><a href="../index.html#classes">Class VIII</a><a
+            href="../index.html#classes">Class IX</a><a href="../index.html#classes">Class X</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+918342916384"><i class="fa-solid fa-phone"></i> +91 83429 16384</a><a
+            href="https://wa.me/918342916384" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>
+            WhatsApp</a><span><i class="fa-solid fa-location-dot"></i> Khordha, Odisha</span>
         </div>
       </div>
-      <div class="wrap copy">
-        © <span id="year"></span> GyanDeep Academy. All rights reserved.
+      <div class="wrap bottom">
+        © <span id="year"></span> GyanDeep Academy. All rights reserved.<span>Coaching Centre • Khordha, Odisha</span>
       </div>
     </footer>
+    <a class="wa"
+      href="https://wa.me/918342916384?text=Hello%20GyanDeep%20Academy%2C%20I%20want%20to%20enquire%20about%20admission."
+      target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><button id="up"
+      class="up" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <script>
+      const menu = document.getElementById('menu');
+      const mobile = document.getElementById('mobile');
+      if (menu && mobile) {
+        menu.addEventListener('click', () => {
+          mobile.classList.toggle('open');
+          menu.innerHTML = mobile.classList.contains('open')
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+        [...document.querySelectorAll('#mobile a')].forEach((a) => {
+          a.onclick = () => mobile.classList.remove('open');
+        });
+      }
+
+      const theme = document.getElementById('theme');
+      if (theme) {
+        const setThemeIcon = () => {
+          theme.innerHTML = document.body.classList.contains('dark')
+            ? '<i class="fa-solid fa-sun"></i>'
+            : '<i class="fa-solid fa-moon"></i>';
+        };
+
+        if (localStorage.getItem('gd-theme') === 'dark') document.body.classList.add('dark');
+        setThemeIcon();
+        theme.onclick = () => {
+          document.body.classList.toggle('dark');
+          localStorage.setItem('gd-theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+          setThemeIcon();
+        };
+      }
+
+      const year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      const up = document.getElementById('up');
+      if (up) {
+        addEventListener('scroll', () => up.classList.toggle('show', scrollY > 500), { passive: true });
+        up.onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
+      }
       const books = [['VI', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-6/odia.pdf'], ['VI', 'Mathematics', 'Mathematics', 'fa-calculator', 'gold', 'Mathematics', 'books/class-6/mathematics.pdf'], ['VI', 'Science', 'Science', 'fa-flask', 'green', 'Science', 'books/class-6/science.pdf'], ['VII', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-7/odia.pdf'], ['VII', 'Mathematics', 'Mathematics', 'fa-calculator', 'gold', 'Mathematics', 'books/class-7/mathematics.pdf'], ['VII', 'Science', 'Science', 'fa-flask', 'green', 'Science', 'books/class-7/science.pdf'], ['VII', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-7/english.pdf'], ['VIII', 'Mathematics', 'Mathematics', 'fa-square-root-variable', 'gold', 'Mathematics', 'books/class-8/mathematics.pdf'], ['VIII', 'Science', 'Science', 'fa-atom', 'blue', 'Science', 'books/class-8/science.pdf'], ['VIII', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'purple', 'Language', 'books/class-8/odia.pdf'], ['IX', 'Mathematics', 'Mathematics', 'fa-chart-line', 'dark', 'Mathematics', 'books/class-9/mathematics.pdf'], ['IX', 'Science', 'Science', 'fa-microscope', 'red', 'Science', 'books/class-9/science.pdf'], ['IX', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-9/english.pdf'], ['X', 'Mathematics', 'Mathematics', 'fa-trophy', 'gold', 'Mathematics', 'books/class-10/mathematics.pdf'], ['X', 'Science', 'Science', 'fa-atom', 'green', 'Science', 'books/class-10/science.pdf'], ['X', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-10/odia.pdf'], ['X', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-10/english.pdf'], ['X', 'Social Science', 'Social Science', 'fa-earth-asia', 'dark', 'Social Science', 'books/class-10/social-science.pdf']];
 
       const grid = document.getElementById('grid');

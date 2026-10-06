@@ -79,6 +79,16 @@ body.dark header {
   justify-content: space-between;
   gap: 25px;
 }
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-logo img {
+  display: block;
+  height: 54px;
+  width: auto;
+}
 .logo {
   display: flex;
   align-items: center;
