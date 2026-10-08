@@ -39,6 +39,14 @@ const io = new IntersectionObserver(
   { threshold: 0.12 },
 );
 $$(".reveal").forEach((x) => io.observe(x));
+const homeHero = $("#home"),
+  whatsapp = $(".wa");
+if (homeHero && whatsapp) {
+  const whatsappObserver = new IntersectionObserver(([entry]) => {
+    whatsapp.classList.toggle("show", !entry.isIntersecting);
+  });
+  whatsappObserver.observe(homeHero);
+}
 $("#year").textContent = new Date().getFullYear();
 const up = $("#up");
 addEventListener("scroll", () => up.classList.toggle("show", scrollY > 500), {

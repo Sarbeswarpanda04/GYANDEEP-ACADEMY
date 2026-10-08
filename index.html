@@ -13,21 +13,24 @@
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#092f68" />
   <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <!-- Replace YOUR-DOMAIN.com after purchasing/deploying the domain. -->
-  <link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="canonical" href="https://sarbeswarpanda04.github.io/GYANDEEP-ACADEMY/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GyanDeep Academy" />
+  <meta property="og:locale" content="en_IN" />
   <meta property="og:title" content="GyanDeep Academy | Khordha" />
   <meta property="og:description" content="Learn Today, Lead Tomorrow — Classes VI–X | BSE Odisha | Odia Medium" />
-  <meta property="og:image" content="assets/images/academy-poster.png" />
-  <meta property="og:url" content="https://YOUR-DOMAIN.com/" />
+  <meta property="og:image" content="https://sarbeswarpanda04.github.io/GYANDEEP-ACADEMY/assets/images/academy-poster.png" />
+  <meta property="og:image:alt" content="GyanDeep Academy coaching centre poster with school students" />
+  <meta property="og:url" content="https://sarbeswarpanda04.github.io/GYANDEEP-ACADEMY/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GyanDeep Academy | Khordha" />
   <meta name="twitter:description" content="Coaching Centre for Classes VI–X, BSE Odisha, Odia Medium." />
-  <meta name="twitter:image" content="assets/images/academy-poster.png" />
+  <meta name="twitter:image" content="https://sarbeswarpanda04.github.io/GYANDEEP-ACADEMY/assets/images/academy-poster.png" />
+  <meta name="twitter:image:alt" content="GyanDeep Academy coaching centre poster with school students" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -40,7 +43,10 @@
       {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
+        "@id": "https://sarbeswarpanda04.github.io/GYANDEEP-ACADEMY/#organization",
         "name": "GyanDeep Academy",
+        "url": "https://sarbeswarpanda04.github.io/GYANDEEP-ACADEMY/",
+        "image": "https://sarbeswarpanda04.github.io/GYANDEEP-ACADEMY/assets/images/academy-poster.png",
         "description": "Coaching centre for Classes VI–X, BSE Odisha, Odia Medium in Khordha, Odisha.",
         "telephone": "+91 83429 16384",
         "address": {
@@ -55,7 +61,7 @@
     </script>
 </head>
 
-<body>
+<body class="home-page">
   <div class="top">
     <div><i class="fa-solid fa-bullhorn"></i> Admissions opening soon</div>
     <a href="#admission">Enquire now <i class="fa-solid fa-arrow-right"></i></a>
@@ -108,7 +114,7 @@
         </div>
         <div class="visual reveal">
           <img src="assets/images/academy-poster.png"
-            alt="GyanDeep Academy coaching centre poster with school students" />
+            alt="GyanDeep Academy coaching centre poster with school students" fetchpriority="high" />
         </div>
       </div>
       <div class="quick-note">
@@ -550,7 +556,8 @@
       </div>
     </div>
     <div class="wrap bottom">
-      © <span id="year"></span> GyanDeep Academy. All rights reserved.<span>Coaching Centre • Khordha, Odisha</span>
+      <span class="copyright">© <span id="year"></span> GyanDeep Academy. All rights reserved.</span>
+      <span class="footer-location">Coaching Centre • Khordha, Odisha</span>
     </div>
   </footer>
   <a class="wa"
