@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@700;800&family=Noto+Sans+Oriya:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -47,7 +47,7 @@
       }
 
       .wrap {
-        width: min(1180px, calc(100% - 30px));
+        width: min(1700px, calc(100% - 64px));
         margin: auto;
       }
 
@@ -423,9 +423,9 @@
       }
 
       .foot {
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(150px, 0.8fr)) minmax(220px, 1.1fr);
+        gap: clamp(32px, 5vw, 90px);
       }
 
       .foot strong {
@@ -467,6 +467,10 @@
       }
 
       @media (max-width: 500px) {
+        .wrap {
+          width: calc(100% - 30px);
+        }
+
         .grid {
           grid-template-columns: 1fr;
         }
@@ -504,6 +508,7 @@
           <a href="books.html">Books</a>
         </nav>
         <div class="navbtn">
+          <button id="language" class="language-toggle" type="button" aria-label="Switch to Odia language">ଓଡ଼ିଆ</button>
           <button id="theme" aria-label="Toggle theme">
             <i class="fa-solid fa-moon"></i></button><a class="call" href="tel:+918342916384"><i
               class="fa-solid fa-phone"></i> Call Now</a><button id="menu" aria-label="Menu">
@@ -640,6 +645,13 @@
       const books = [['VI', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-6/odia.pdf'], ['VI', 'Mathematics', 'Mathematics', 'fa-calculator', 'gold', 'Mathematics', 'books/class-6/mathematics.pdf'], ['VI', 'Science', 'Science', 'fa-flask', 'green', 'Science', 'books/class-6/science.pdf'], ['VII', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-7/odia.pdf'], ['VII', 'Mathematics', 'Mathematics', 'fa-calculator', 'gold', 'Mathematics', 'books/class-7/mathematics.pdf'], ['VII', 'Science', 'Science', 'fa-flask', 'green', 'Science', 'books/class-7/science.pdf'], ['VII', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-7/english.pdf'], ['VIII', 'Mathematics', 'Mathematics', 'fa-square-root-variable', 'gold', 'Mathematics', 'books/class-8/mathematics.pdf'], ['VIII', 'Science', 'Science', 'fa-atom', 'blue', 'Science', 'books/class-8/science.pdf'], ['VIII', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'purple', 'Language', 'books/class-8/odia.pdf'], ['IX', 'Mathematics', 'Mathematics', 'fa-chart-line', 'dark', 'Mathematics', 'books/class-9/mathematics.pdf'], ['IX', 'Science', 'Science', 'fa-microscope', 'red', 'Science', 'books/class-9/science.pdf'], ['IX', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-9/english.pdf'], ['X', 'Mathematics', 'Mathematics', 'fa-trophy', 'gold', 'Mathematics', 'books/class-10/mathematics.pdf'], ['X', 'Science', 'Science', 'fa-atom', 'green', 'Science', 'books/class-10/science.pdf'], ['X', 'Odia', 'ଓଡ଼ିଆ', 'fa-language', 'blue', 'Language', 'books/class-10/odia.pdf'], ['X', 'English', 'English', 'fa-book', 'purple', 'Language', 'books/class-10/english.pdf'], ['X', 'Social Science', 'Social Science', 'fa-earth-asia', 'dark', 'Social Science', 'books/class-10/social-science.pdf']];
 
       const grid = document.getElementById('grid');
+      const subjectNamesOdia = {
+        Odia: 'ଓଡ଼ିଆ',
+        Mathematics: 'ଗଣିତ',
+        Science: 'ବିଜ୍ଞାନ',
+        English: 'ଇଂରାଜୀ',
+        'Social Science': 'ସାମାଜିକ ବିଜ୍ଞାନ',
+      };
       const empty = document.createElement('div');
       empty.className = 'empty';
       empty.innerHTML = '<i class="fa-solid fa-book-open"></i><h3>No books found</h3><p>Try another class or search term.</p>';
@@ -650,7 +662,8 @@
         let n = 0;
 
         books.forEach((b) => {
-          const matches = (cls === 'all' || b[0] === cls) && (!q || b.join(' ').toLowerCase().includes(q));
+          const searchText = `${b.join(' ')} ${subjectNamesOdia[b[1]] || ''}`.toLowerCase();
+          const matches = (cls === 'all' || b[0] === cls) && (!q || searchText.includes(q));
           if (!matches) return;
           n++;
           grid.insertAdjacentHTML(
@@ -660,6 +673,7 @@
         });
 
         empty.style.display = n ? 'none' : 'block';
+        window.dispatchEvent(new Event('books:rendered'));
       }
 
       let cls = 'all';
@@ -678,6 +692,8 @@
 
       document.getElementById('year').textContent = new Date().getFullYear();
       render();
+      window.addEventListener('books:rendered', () => window.applyOdiaTranslations?.());
     </script>
+    <script src="../js/odia.js"></script>
   </body>
 </html>

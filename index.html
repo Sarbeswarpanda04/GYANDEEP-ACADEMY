@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Oriya:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -69,6 +69,7 @@
         <a href="page/books.html">Books</a>
       </nav>
       <div class="navbtn">
+        <button id="language" class="language-toggle" type="button" aria-label="Switch to Odia language">ଓଡ଼ିଆ</button>
         <button id="theme" aria-label="Toggle theme">
           <i class="fa-solid fa-moon"></i></button><a class="call" href="tel:+918342916384"><i
             class="fa-solid fa-phone"></i> Call Now</a><button id="menu" aria-label="Menu">
@@ -92,7 +93,7 @@
           <h1>
             Gyandeep Academy<span>Khordha</span>
           </h1>
-          <p>
+          <p id="hero-description">
             Focused academic support for <b>Classes VI–X</b>, designed for
             <b>BSE Odisha</b> students studying in the <b>Odia Medium</b>.
           </p>
@@ -286,6 +287,73 @@
               progress.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="heading center reveal">
+          <label>STUDENT REVIEWS</label>
+          <h2 id="reviews-title">A preview of student voices.</h2>
+          <p class="review-disclaimer">Sample carousel preview — replace these cards with real, approved student reviews before publishing.</p>
+        </div>
+        <div class="review-window" aria-label="Scrolling sample student reviews">
+          <div class="review-track">
+            <article class="review-card">
+              <img class="review-background" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="" />
+              <div class="review-student">
+                <span><b>Sample student</b><small>Class VIII · Sample</small></span>
+              </div>
+              <div class="review-stars" aria-label="Sample rating">★★★★★</div>
+              <p>“Clear explanations and regular practice can help make difficult topics easier to understand.”</p>
+              <small class="sample-tag">SAMPLE REVIEW</small>
+            </article>
+            <article class="review-card">
+              <img class="review-background" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="" />
+              <div class="review-student">
+                <span><b>Sample student</b><small>Class IX · Sample</small></span>
+              </div>
+              <div class="review-stars" aria-label="Sample rating">★★★★★</div>
+              <p>“A welcoming place to ask questions, build confidence and keep learning step by step.”</p>
+              <small class="sample-tag">SAMPLE REVIEW</small>
+            </article>
+            <article class="review-card">
+              <img class="review-background" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="" />
+              <div class="review-student">
+                <span><b>Sample student</b><small>Class X · Sample</small></span>
+              </div>
+              <div class="review-stars" aria-label="Sample rating">★★★★★</div>
+              <p>“Focused revision and written practice can help students prepare with greater confidence.”</p>
+              <small class="sample-tag">SAMPLE REVIEW</small>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img class="review-background" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="" />
+              <div class="review-student">
+                <span><b>Sample student</b><small>Class VIII · Sample</small></span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p>“Clear explanations and regular practice can help make difficult topics easier to understand.”</p>
+              <small class="sample-tag">SAMPLE REVIEW</small>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img class="review-background" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="" />
+              <div class="review-student">
+                <span><b>Sample student</b><small>Class IX · Sample</small></span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p>“A welcoming place to ask questions, build confidence and keep learning step by step.”</p>
+              <small class="sample-tag">SAMPLE REVIEW</small>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <img class="review-background" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="" />
+              <div class="review-student">
+                <span><b>Sample student</b><small>Class X · Sample</small></span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p>“Focused revision and written practice can help students prepare with greater confidence.”</p>
+              <small class="sample-tag">SAMPLE REVIEW</small>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -492,6 +560,7 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
   <script src="js/script.js"></script>
+  <script src="js/odia.js"></script>
 </body>
 
 </html>
