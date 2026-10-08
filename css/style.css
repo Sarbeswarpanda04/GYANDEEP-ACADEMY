@@ -461,8 +461,15 @@ body.dark .visual > img {
   background: var(--soft);
 }
 .blue {
-  background: linear-gradient(130deg, var(--navy2), var(--navy));
-  color: #fff;
+  background: linear-gradient(130deg, #e8f2ff 0%, #f5f9ff 55%, #e2efff 100%);
+  color: var(--navy);
+}
+body.dark .blue {
+  background: linear-gradient(130deg, #0c1d35 0%, #102746 55%, #0b1b32 100%);
+  color: var(--ink);
+}
+body.dark .blue label {
+  color: var(--gold);
 }
 .twocol,
 .admission,
@@ -479,9 +486,8 @@ body.dark .visual > img {
   font-size: 11px;
   letter-spacing: 2px;
 }
-.blue label,
-.light label {
-  color: var(--gold);
+.blue label {
+  color: #a66d00;
 }
 h2 {
   font: 800 clamp(32px, 4vw, 50px)/1.1 Manrope;
@@ -696,10 +702,15 @@ body.dark .form,
   gap: 16px;
 }
 .feature {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(18, 86, 160, 0.12);
   border-radius: 20px;
   padding: 25px;
+  box-shadow: 0 12px 30px rgba(9, 47, 104, 0.06);
+}
+body.dark .feature {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.04);
 }
 .feature > i {
@@ -716,7 +727,7 @@ body.dark .form,
   font: 800 18px Manrope;
 }
 .feature p {
-  color: #b8c9df;
+  color: var(--muted);
   font-size: 12px;
 }
 .steps {
@@ -921,7 +932,7 @@ body.dark .faqs details {
   color: #b8c9df;
   margin: 0;
 }
-.light {
+.ctain .light {
   background: #fff;
   color: var(--navy);
 }
@@ -1162,6 +1173,12 @@ footer {
   .wrap {
     width: calc(100% - 30px);
   }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 102px);
+    min-height: calc(100svh - 102px);
+  }
   .section {
     padding: 72px 0;
   }
@@ -1218,6 +1235,7 @@ footer {
     font-size: 14px;
   }
   .quick {
+    margin-top: auto;
     border-top-width: 3px;
   }
   .quick span {
