@@ -393,8 +393,34 @@ body.dark .visual > img {
   background: linear-gradient(135deg, var(--navy2), var(--navy));
   color: #fff;
   border-top: 5px solid var(--gold);
-  margin-top: 70px;
+  margin-top: 0;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.quick-note {
+  width: 100%;
+  margin: 55px 0 0;
+  padding: 12px 14px;
+  background: var(--gold);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--navy);
+}
+@media (max-width: 560px) {
+  .quick-note {
+    font-size: 16px;
+  }
+}
+.quick-note marquee {
+  width: 100%;
+}
+.quick-note span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.quick-note i {
+  color: var(--navy);
 }
 .quickgrid {
   display: grid;
@@ -1085,6 +1111,15 @@ footer {
   .hero-grid {
     min-height: auto;
   }
+  .visual {
+    order: -1;
+    margin-top: 0;
+  }
+  .visual > img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
   .hero-copy {
     text-align: center;
   }
@@ -1094,9 +1129,6 @@ footer {
   }
   .hero p {
     margin: auto;
-  }
-  .visual {
-    margin-top: 20px;
   }
   .quickgrid {
     grid-template-columns: 1fr 1fr;
@@ -1156,9 +1188,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-  }
-  .visual > img {
-    aspect-ratio: 0.88;
   }
   .quick span {
     justify-content: flex-start;
